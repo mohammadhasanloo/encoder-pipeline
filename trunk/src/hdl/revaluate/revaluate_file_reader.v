@@ -23,7 +23,7 @@ module revaluate_file_reader(clk, rst, ld, en_cnt, line_number, pout);
   else begin
     if(ld) begin
       //if (!$feof(data_file)) begin
-        data_file = $fopen("file\\revaluateInput.txt", "r");
+        data_file = $fopen("file/revaluateInput.txt", "r");
         //scan_file = $fscanf(data_file, "%b\n", captured_data); 
         //pout <= captured_data;
         for (n = 0; n < line_number; n = n + 1) begin

@@ -11,11 +11,16 @@ module TB ();
     always #5 clk = ~clk;
 
     initial begin
+        $dumpfile("encoder.vcd");
+        $dumpvars(0, TB);
+    end
+
+    initial begin
         #30 rst = 1'b0;
         #30 start = 1'b1;
         #30 start = 1'b0;
         #3000100;
-        $stop;
+        $finish;
     end
 
 endmodule

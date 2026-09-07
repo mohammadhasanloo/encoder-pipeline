@@ -60,7 +60,7 @@ module rotate_file_reader(clk, rst, ld_curr_fr, ld_des_fr, line_number, pout, in
         pout <= 0;
     else begin
       if(ld_curr_fr) begin
-        data_file = $fopen("file\\rotateInput.txt", "r");
+        data_file = $fopen("file/rotateInput.txt", "r");
         for (n = 0; n < line_number; n = n + 1) begin
           scan_file = $fscanf(data_file, "%b\n", captured_data);
         end
@@ -68,7 +68,7 @@ module rotate_file_reader(clk, rst, ld_curr_fr, ld_des_fr, line_number, pout, in
         pout <= captured_data;  
       end
       else if(ld_des_fr) begin
-        data_file = $fopen("file\\rotateInput.txt", "r");
+        data_file = $fopen("file/rotateInput.txt", "r");
         for (n = 0; n < new_line_number + 1; n = n + 1) begin
           scan_file = $fscanf(data_file, "%b\n", captured_data);
         end

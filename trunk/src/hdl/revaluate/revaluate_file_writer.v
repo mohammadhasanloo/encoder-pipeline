@@ -12,7 +12,7 @@ module revaluate_file_writer (clk, rst, start, en, pin, co_c25, co_c64);
   integer fd;         // file handler  
   
 	always @(start) begin
-		fd = $fopen("file\\addRcInput.txt", "w");
+		fd = $fopen("file/addRcInput.txt", "w");
 	end
 	
   //initial begin

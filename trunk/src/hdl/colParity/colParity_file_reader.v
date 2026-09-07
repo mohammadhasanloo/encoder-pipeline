@@ -17,7 +17,7 @@ module colParity_file_reader(clk, rst, ld_curr_fr, ld_prev_fr, line_number, turn
   reg [N-1:0] captured_data;
   wire [5 : 0] new_line_number;
   wire now_turn = turn;
-  wire [8*18:0] in_file_name = (turn == 0) ? "file\\input_0.txt" : "file\\colPInput.txt"; 
+  wire [8*18:0] in_file_name = (turn == 0) ? "file/input_0.txt" : "file/colPInput.txt"; 
   assign new_line_number = ((line_number - 2) % 64) + 1;
   
 
